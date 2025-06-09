@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap");
+
+font-family: "Merriweather Sans", sans-serif;
+
+
+
 body {
     border-color: black;
 }
@@ -6,4 +12,32 @@ h1 {
     padding: 5px 5px;
     text-shadow: 2px red;
     background-color: aqua;
+}
+
+:root {
+  --nav-color: #675d50;
+  --nav-text: #fff;
+  --primary-color: #f3deba;
+  --secondary-color: #abc4aa;
+  --hover-color: #a9907e;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+.container {
+  background-color: var(--nav-color);
+  font-size: 1.2rem;
+  font-family: "Merriweather Sans", sans-serif;
+  height: 70px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
 }
