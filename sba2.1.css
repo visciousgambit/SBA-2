@@ -4,7 +4,7 @@
   --nav-color: #675d50;
   --nav-text: #fff;
   --primary-color: #f3deba;
-  --secondary-color: #abc4aa;
+  --secondary-color: #61d65d;
   --hover-color: #a9907e;
 }
 
@@ -14,6 +14,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+section{ 
+  font-size: 24px;
 }
 
 .container {
@@ -52,6 +56,7 @@ a {
 .navbar a {
   color: var(--nav-text);
   font-weight: bold;
+  font-size: 40px;
 }
 
 .navbar a:hover {
@@ -74,67 +79,3 @@ h1{
     font-size: 2rem;
 }
 
-.container {
-  display: grid | inline-grid;
-}
-
-.item-a {
-  grid-column-start: 2;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: 3;
-}
-
-.item-b {
-  grid-column-start: 1;
-  grid-column-end: span col4-start;
-  grid-row-start: 2;
-  grid-row-end: span 2;
-}
-
-.item {
-  grid-column: <start-line> / <end-line> | <start-line> / span <value>;
-  grid-row: <start-line> / <end-line> | <start-line> / span <value>;
-}
-
-.item-c {
-  grid-column: 3 / span 2;
-  grid-row: third-line / 4;
-}
-
-.item {
-  grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>;
-}
-
-.item-d {
-  grid-area: header;
-}
-
-.item-d {
-  grid-area: 1 / col4-start / last-line / 6;
-}
-
-
-
-.item-a {
-  grid-area: header;
-}
-.item-b {
-  grid-area: main;
-}
-.item-c {
-  grid-area: sidebar;
-}
-.item-d {
-  grid-area: footer;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header header header header"
-    "main main . sidebar"
-    "footer footer footer footer";
-}
