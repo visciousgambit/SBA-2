@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap");
 
-font-family: "Merriweather Sans", sans-serif;
-
-
-
-body {
-    border-color: black;
-}
-
-h1 {
-    padding: 5px 5px;
-    text-shadow: 2px red;
-    background-color: aqua;
-}
-
 :root {
   --nav-color: #675d50;
   --nav-text: #fff;
@@ -24,6 +10,10 @@ h1 {
 
 body {
   background-color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -40,4 +30,111 @@ body {
   height: 100%;
   width: 80%;
   margin: auto;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.container .navbar {
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.container .navbar ul li {
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: var(--nav-text);
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+
+/* Responsive section for small screen like mobile devices */
+
+@media screen and (min-width: 390px) and (max-width: 767px) {
+  .container {
+    height: 100%;
+  }
+
+  .container .navbar {
+    flex-direction: column;
+  }
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.container {
+  display: grid | inline-grid;
+}
+
+.item-a {
+  grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+}
+
+.item-b {
+  grid-column-start: 1;
+  grid-column-end: span col4-start;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+}
+
+.item {
+  grid-column: <start-line> / <end-line> | <start-line> / span <value>;
+  grid-row: <start-line> / <end-line> | <start-line> / span <value>;
+}
+
+.item-c {
+  grid-column: 3 / span 2;
+  grid-row: third-line / 4;
+}
+
+.item {
+  grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>;
+}
+
+.item-d {
+  grid-area: header;
+}
+
+.item-d {
+  grid-area: 1 / col4-start / last-line / 6;
+}
+
+
+
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: main;
+}
+.item-c {
+  grid-area: sidebar;
+}
+.item-d {
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
 }
